@@ -18,7 +18,7 @@ def parse_args_and_config():
     parser.add_argument('--config', type=str, default='anneal.yml',  help='Path to the config file')
     parser.add_argument('--seed', type=int, default=1234, help='Random seed')
     parser.add_argument('--run', type=str, default='run', help='Path for saving running related data.')
-    parser.add_argument('--doc', type=str, default='mnist', help='A string for documentation purpose')
+    parser.add_argument('--doc', type=str, default='0', help='A string for documentation purpose')
     parser.add_argument('--comment', type=str, default='', help='A string for experiment comment')
     parser.add_argument('--verbose', type=str, default='info', help='Verbose level: info | debug | warning | critical')
     parser.add_argument('--test', action='store_true', help='Whether to test the model')
