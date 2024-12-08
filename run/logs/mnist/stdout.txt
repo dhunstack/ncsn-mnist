@@ -1,15 +1,7 @@
-INFO - main.py - 2024-12-08 18:31:00,192 - Using device: cpu
-INFO - main.py - 2024-12-08 18:31:00,193 - Writing log file to run/logs/mnist
-INFO - main.py - 2024-12-08 18:31:00,193 - Exp instance id = 94234
-INFO - main.py - 2024-12-08 18:31:00,193 - Exp comment = 
-INFO - main.py - 2024-12-08 18:31:00,193 - Config =
-INFO - anneal_runner.py - 2024-12-08 18:31:10,041 - step: 1, loss: 517.24609375
-INFO - anneal_runner.py - 2024-12-08 18:31:17,065 - step: 2, loss: 608.84130859375
-INFO - anneal_runner.py - 2024-12-08 18:31:24,078 - step: 3, loss: 546.654541015625
-INFO - anneal_runner.py - 2024-12-08 18:31:31,079 - step: 4, loss: 356.77459716796875
-INFO - anneal_runner.py - 2024-12-08 18:31:38,104 - step: 5, loss: 312.38262939453125
-INFO - anneal_runner.py - 2024-12-08 18:31:46,094 - step: 6, loss: 319.6180725097656
-INFO - anneal_runner.py - 2024-12-08 18:31:53,125 - step: 7, loss: 322.0822448730469
-INFO - anneal_runner.py - 2024-12-08 18:32:00,116 - step: 8, loss: 302.229248046875
-INFO - anneal_runner.py - 2024-12-08 18:32:07,118 - step: 9, loss: 294.74493408203125
-INFO - anneal_runner.py - 2024-12-08 18:32:14,099 - step: 10, loss: 293.9688720703125
+INFO - main.py - 2024-12-08 19:39:27,041 - Using device: cpu
+INFO - main.py - 2024-12-08 19:39:27,044 - Writing log file to run/logs/mnist
+INFO - main.py - 2024-12-08 19:39:27,044 - Exp instance id = 7641
+INFO - main.py - 2024-12-08 19:39:27,044 - Exp comment = 
+INFO - main.py - 2024-12-08 19:39:27,044 - Config =
+INFO - anneal_runner.py - 2024-12-08 19:42:25,339 - step: 1, loss: 517.24609375
+INFO - anneal_runner.py - 2024-12-08 19:43:12,212 - step: 2, loss: 608.84130859375

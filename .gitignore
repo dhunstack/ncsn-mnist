@@ -2,3 +2,5 @@ __pycache__
 *.pth
 datasets
 .DS_Store
+logs
+tensorboard
