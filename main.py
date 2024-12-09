@@ -8,14 +8,14 @@ import sys
 import os
 import torch
 import numpy as np
-from anneal_runner import AnnealRunner
+from runner import Runner
 
 
 def parse_args_and_config():
     parser = argparse.ArgumentParser(description=globals()['__doc__'])
 
-    parser.add_argument('--runner', type=str, default='AnnealRunner', help='The runner to execute')
-    parser.add_argument('--config', type=str, default='anneal.yml',  help='Path to the config file')
+    parser.add_argument('--runner', type=str, default='Runner', help='The runner to execute')
+    parser.add_argument('--config', type=str, default='config.yml',  help='Path to the config file')
     parser.add_argument('--seed', type=int, default=1234, help='Random seed')
     parser.add_argument('--run', type=str, default='run', help='Path for saving running related data.')
     parser.add_argument('--doc', type=str, default='0', help='A string for documentation purpose')
@@ -38,7 +38,6 @@ def parse_args_and_config():
         new_config = dict2namespace(config)
     else:
         with open(os.path.join(args.log, 'config.yml'), 'r') as f:
-        # with open(os.path.join('configs', args.config), 'r') as f:
             config = yaml.unsafe_load(f)
         new_config = config
 

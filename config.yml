@@ -3,8 +3,7 @@ training:
   n_epochs: 10
   n_iters: 200000
   ngpu: 1
-  snapshot_freq: 5
-  algo: 'dsm'
+  snapshot_freq: 1000
   anneal_power: 2.0
 
 data:
@@ -12,8 +11,6 @@ data:
   dataset: "MNIST"
   image_size: 28
   channels: 1
-  logit_transform: false
-  random_flip: false
 
 model:
   sigma_begin: 1

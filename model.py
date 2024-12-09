@@ -5,7 +5,6 @@ from functools import partial
 
 
 def conv3x3(in_planes, out_planes, stride=1, bias=False):
-    "3x3 convolution with padding"
     return nn.Conv2d(in_planes, out_planes, kernel_size=3, stride=stride,
                      padding=1, bias=bias)
 
@@ -90,9 +89,6 @@ class CondRCUBlock(nn.Module):
 
 class CondMSFBlock(nn.Module):
     def __init__(self, in_planes, features, num_classes, normalizer):
-        """
-        :param in_planes: tuples of input planes
-        """
         super().__init__()
         assert isinstance(in_planes, list) or isinstance(in_planes, tuple)
 
@@ -259,13 +255,11 @@ class ConditionalInstanceNorm2dPlus(nn.Module):
 class CondRefineNetDilated(nn.Module):
     def __init__(self, config):
         super().__init__()
-        self.logit_transform = config.data.logit_transform
-        # self.norm = ConditionalInstanceNorm2d
+
         self.norm = ConditionalInstanceNorm2dPlus
         self.ngf = ngf = config.model.ngf
         self.num_classes = config.model.num_classes
         self.act = act = nn.ELU()
-        # self.act = act = nn.ReLU(True)
 
         self.begin_conv = nn.Conv2d(config.data.channels, ngf, 3, stride=1, padding=1)
         self.normalizer = self.norm(ngf, self.num_classes)
@@ -319,8 +313,7 @@ class CondRefineNetDilated(nn.Module):
         return x
 
     def forward(self, x, y):
-        if not self.logit_transform:
-            x = 2 * x - 1.
+        x = 2 * x - 1.
 
         output = self.begin_conv(x)
 
